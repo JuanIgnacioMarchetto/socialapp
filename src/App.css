@@ -10,9 +10,11 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f0f0f0;
+  background: url(https://media.istockphoto.com/id/1394452639/vector/coputer-internet-cyber-security-background-cyber-crime-vector-illustration-digital-lock.jpg?s=612x612&w=0&k=20&c=KD48hTGER5qp-nYJ95R1-XkJM67bLtxFgNSfzdzs9iA=);
   margin: 0;
   padding: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
   box-sizing: border-box;
 }
 
@@ -69,6 +71,36 @@ button:hover {
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+nav {
+  background-color: #3498db;
+  padding: 10px;
+  border-bottom: 5px solid #2980b9; 
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #ecf0f1; 
+  padding: 5px;
+  border-radius: 5px;
+  border: 2px solid #2980b9; 
+}
+
+a:hover {
+  background-color: #2980b9; 
+}
+
 
 .App-link {
   color: #61dafb;
