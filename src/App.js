@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import Post from './components/Post/post';
 import PostForm from './components/PostForm/PostForm';
 import Login from './components/Login/Login';
-import './App.css'
+import './App.css';
 
 const App = () => {
   const [user, setUser] = useState(null);
@@ -14,8 +14,23 @@ const App = () => {
     setPosts(storedPosts);
   }, []);
 
-  const handleLogin = (username) => {
+  const handleLogin = ({ username, password, email }) => {
     setUser(username);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const username = e.target.elements.username.value;
+    const password = e.target.elements.password.value;
+    const email = e.target.elements.email.value;
+
+    if (!username || !password || !email) {
+      alert('Todos los campos son obligatorios');
+      return;
+    }
+
+    handleLogin({ username, password, email });
   };
 
   const handlePostSubmit = (content) => {
